@@ -90,7 +90,7 @@ const HotCollections = () => {
   }, []);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -138,9 +138,13 @@ const HotCollections = () => {
 
           <div className="col-lg-12">
             {loading ? (
-              <div className="text-center">
-                <p>Loading collections</p>
-              </div>
+              <Slider {...settings}>
+                {new Array(8).fill(0).map((_, index) => (
+                  <div key={index} className="px-2">
+                    <CollectionSkeleton />
+                  </div>
+                ))}
+              </Slider>
             ) : (
               <Slider {...settings}>
                 {collections.map((collection, index) => (
