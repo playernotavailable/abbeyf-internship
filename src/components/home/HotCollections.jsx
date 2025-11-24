@@ -37,7 +37,7 @@ const NextArrow = (props) => {
         transform: 'translateY(-50%)',
         cursor: 'pointer',
         zIndex: 10,
-        fontSize: '30px',
+        fontSize: '20px',
         color: '#333'
       }}
     >
@@ -59,8 +59,8 @@ const PrevArrow = (props) => {
         transform: 'translateY(-50%)',
         cursor: 'pointer',
         zIndex: 10,
-        fontSize: '30px',
-        color: '#333'
+        fontSize: '20px',
+        color: '#020202ff'
       }}
     >
       <i className="fa fa-chevron-left"></i>
